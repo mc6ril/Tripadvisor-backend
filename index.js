@@ -7,7 +7,7 @@ app.use(cors());
 require('dotenv').config();
 
 //Mailgun congiguration
-const api_key = process.env.API_KEY; /* VOTRE CLÉ API */
+const api_key = process.env.API_KEY;
 const domain = process.env.DOMAIN;
 const mailgun = require('mailgun-js')({ apiKey: api_key, domain: domain });
 
