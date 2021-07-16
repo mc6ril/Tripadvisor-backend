@@ -26,6 +26,7 @@ app.post('/form', async (req, res) => {
         };
         mailgun.messages().send(data, (error, body) => {
             if (!error) {
+                console.log('mail envoyé');
                 return res.status(200).json(body);
             } else {
                 return res.status(401).json(error);
