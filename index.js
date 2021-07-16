@@ -21,11 +21,13 @@ app.post('/form', async (req, res) => {
 
         const data = {
             from: `${firstname} ${lastname} <${email}>`,
-            to: 'lesot.cyril@gmail.com',
+            to: 'cyril.lesot@yahoo.fr',
             subject: 'Nouveau client',
             text: description,
         };
         mailgun.messages().send(data, (error, body) => {
+            console.log(body);
+            console.log(error);
             if (!error) {
                 return res.status(200).json(body);
             } else {
