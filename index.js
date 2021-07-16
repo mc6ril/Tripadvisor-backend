@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
     res.status(200).json({ message: 'Bienvenu sur Tripadvisor !' });
 });
 
-app.post('/form', async (req, res) => {
+app.post('/', async (req, res) => {
     try {
         const { firstname, lastname, email, description } = req.fields;
 
