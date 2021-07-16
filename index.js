@@ -9,7 +9,7 @@ require('dotenv').config();
 //Mailgun congiguration
 const api_key = process.env.API_KEY;
 const domain = process.env.DOMAIN;
-const mailgun = require('mailgun-js')({ apiKey: API_KEY, domain: DOMAIN });
+const mailgun = require('mailgun-js')({ apiKey: api_key, domain: domain });
 
 app.get('/', (req, res) => {
     res.status(200).json({ message: 'Bienvenu sur Tripadvisor !' });
